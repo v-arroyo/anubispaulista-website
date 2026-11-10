@@ -12,7 +12,7 @@ toc-auto-numbering: true
 <!-- introduction -->
 ## hello world
 hello, world, this is my first post!
-in fact just a test post to see if my setup is working properly.
+in fact just a test post to see if my setup is working properly. if you are seeing this, then yes it works! yay!
 hopefully the next posts will be more interesting!
 <!--more-->
 <!-- rest of the content -->
