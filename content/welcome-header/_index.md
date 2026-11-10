@@ -12,6 +12,8 @@ list:
     - "coding"
     - "coffee"
     - "knitting"
+    - "rpg"
+    - "video games"
     - "gardening"
     - "3d printing"
     - "volleyball"
