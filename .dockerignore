@@ -1,7 +1,5 @@
 .git
 .github
-node_modules
-*.log
 public/
 resources/
 .hugo_build.lock
