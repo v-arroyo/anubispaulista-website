@@ -1,5 +1,6 @@
 name: build and push docker image for hugo website
 
+# trigger
 on:
   push:
     branches: [ main ]
@@ -13,6 +14,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        # for the theme (as a submodule)
         with:
           submodules: true
 

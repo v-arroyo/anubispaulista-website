@@ -1,4 +1,5 @@
-:80 {
-    root * /srv
-    file_server
+# first site address
+:80 { 
+    root * /srv # sets document root and matchs all requests to directory
+    file_server # serves files from the root, especifically index.html
 }
