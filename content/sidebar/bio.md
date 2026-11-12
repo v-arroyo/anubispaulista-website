@@ -2,4 +2,4 @@
 headless: true
 ---
 
-hello and welcome to my blog!
+hello and welcome to my blog! :)
