@@ -3,6 +3,9 @@ baseURL: 'https://example.com'
 languageCode: 'en-us'
 titleCaseStyle: 'none' # comment this line for forcing capitalized titles on tags
 theme: "neopost"
+aliases:
+  - posts/intro/
+  - 2026/11/intro/
 
 languages:
   en:
