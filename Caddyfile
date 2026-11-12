@@ -1,5 +1,11 @@
 # first site address
-:80 { 
+
+anubispaulista.cat { 
     root * /srv # sets document root and matchs all requests to directory
     file_server # serves files from the root, especifically index.html
+    encode_gzip
+}
+
+www.anubispaulista.cat {
+    redir https://anubispaulista.cat{uri} permanent
 }

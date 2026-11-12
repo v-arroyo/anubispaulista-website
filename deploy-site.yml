@@ -2,29 +2,28 @@
   hosts: webserver
   become: true
   tasks:
-    - name: Install required packages
-      apt:
-        name:
-          - apt-transport-https
-          - ca-certificates
-          - curl
-          - software-properties-common
-        state: present
-        update_cache: true
+  #  - name: Install required packages
+  #    apt:
+  #      name:
+  #        - apt-transport-https
+  #        - ca-certificates
+  #        - curl
+  #      state: present
+  #      update_cache: true
 
-    - name: Add Docker GPG key
-      apt_key:
-        url: https://download.docker.com/linux/ubuntu/gpg
-        state: present
+  #  - name: Add Docker GPG key
+  #    apt_key:
+  #      url: https://download.docker.com/linux/ubuntu/gpg
+  #      state: present
 
-    - name: Add Docker repository
-      apt_repository:
-        repo: "deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
-        state: present
+  #  - name: Add Docker repository
+  #    apt_repository:
+  #      repo: "deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+  #      state: present
 
     - name: Install Docker
       apt:
-        name: docker-ce
+        name: docker.io
         state: latest
         update_cache: true
 
@@ -34,8 +33,15 @@
         state: started
         enabled: true
 
+#    - name: Log in GHCR
+#      community.docker.docker_login:
+#        registry_url: ghcr.io
+#        username: v-arroyo
+#        password: "{{ ghcr_token }}"
+#      no_log: true
+
     - name: Start site container
-      docker_container:
+      community.docker.docker_container:
         name: website
         image: ghcr.io/v-arroyo/website:latest
         pull: true
@@ -44,3 +50,4 @@
         restart_policy: unless-stopped
         ports:
           - "80:80"
+          - "443:443"
