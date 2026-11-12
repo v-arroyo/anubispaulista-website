@@ -23,11 +23,11 @@ languages:
           more: "read more"
           less: "read less"
 
-    permalinks:
-      page:
-        posts: /posts/:year/:month/:slug
-      sections:
-        articles: /posts/
+permalinks:
+  page:
+    posts: /posts/:year/:month/:slug
+  sections:
+    articles: /posts/
 
 params:
   # themes made by neopost: light-blue, dark-blue, light-green, light-yellow, light-pink, light-purple
